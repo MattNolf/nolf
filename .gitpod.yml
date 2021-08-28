@@ -18,6 +18,5 @@ tasks:
   - name: Create local cluster
     init: k3d cluster create
     openMode: split-right
-  - name: Pulumi up
-    command: echo "hi"
-    openMode: split-right
+  - name: Configure Pulumi credentials
+    init: pulumi config set gcp:credentials $GCP_CREDENTIALS
