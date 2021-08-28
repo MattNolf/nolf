@@ -19,4 +19,4 @@ tasks:
     init: k3d cluster create
     openMode: split-right
   - name: Configure Pulumi credentials
-    init: pulumi config set gcp:credentials $GCP_CREDENTIALS
+    init: pulumi login $PULUMI_ACCESS_TOKEN && pulumi config set gcp:credentials $GCP_CREDENTIALS
